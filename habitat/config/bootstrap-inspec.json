@@ -1,0 +1,12 @@
+{
+    "reporter": {
+        "automate" : {
+            "stdout" : "true",
+            "url" : "https://<REPLACE_ME>/data-collector/v0/",
+            "token" : "<REPLACE_ME>",
+            "node_name" : "whale-server",
+            "verify_ssl" : "false",
+            "node_uuid" : "78fc9b28-5696-4e62-a030-d07ca20152de"
+        }
+    }
+}
