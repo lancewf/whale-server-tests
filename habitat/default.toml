@@ -1,14 +1,14 @@
-interval = 1800
-splay = 1800
+interval = 600
+splay = 600
 splay_first_run = 0
 log_level = 'warn'
 report_to_stdout = true
 
 [chef_license]
-acceptance = "undefined"
+acceptance = "accept-no-persist"
 
 [automate]
-enable = true
-server_url = "http://requestbin.sjcmmsn.com/1chvimq1"
+enable = false
+server_url = ""
 token = 'none'
 user = 'none'
