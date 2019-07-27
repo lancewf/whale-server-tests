@@ -4,3 +4,4 @@ policyfiles/*.lock.json
 .kitchen.local.yml
 .idea
 .vagrant
+.bash_history
