@@ -7,7 +7,10 @@ control 'hawaii-alaska-whaledisentanglement-org' do
 
   describe inspec.http("https://hawaii-alaska.whaledisentanglement.org", max_redirects: 1) do
     its('status') { should eq(200) }
-    its('body') { should match('<h2 class="site-description">Hawaii and Alaska</h2>') }
+    its('body') { 
+      should match('<h2 class="site-description">Hawaii and Alaska</h2>')
+      should_not match('cdn.eeduelements.com')
+    }
   end
   describe inspec.http("http://hawaii-alaska.whaledisentanglement.org", max_redirects: 2) do
     its('status') { should eq(200) }
