@@ -7,7 +7,10 @@ control 'west-coast-whaledisentanglement-org' do
 
   describe inspec.http("https://west-coast.whaledisentanglement.org", max_redirects: 1) do
     its('status') { should eq(200) }
-    its('body') { should match('<h2 class="site-description">West Coast</h2>') } 
+    its('body') { 
+      should match('<h2 class="site-description">West Coast</h2>')
+      should_not match('cdn.eeduelements.com')
+     } 
   end
   describe inspec.http("http://west-coast.whaledisentanglement.org", max_redirects: 2) do
     its('status') { should eq(200) }

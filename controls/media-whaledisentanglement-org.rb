@@ -7,7 +7,10 @@ control 'media-whaledisentanglement-org' do
 
   describe inspec.http("https://media.whaledisentanglement.org", max_redirects: 1) do
     its('status') { should eq(200) }
-    its('body') { should match('<h2 class="site-description">Media</h2>') } 
+    its('body') { 
+      should match('<h2 class="site-description">Media</h2>')
+      should_not match('cdn.eeduelements.com')
+    } 
   end
   describe inspec.http("http://media.whaledisentanglement.org", max_redirects: 2) do
     its('status') { should eq(200) }
