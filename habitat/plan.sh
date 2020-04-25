@@ -4,4 +4,4 @@ pkg_origin=lancewf
 pkg_maintainer="Lance Finfrock <lancewf@gmail.com>"
 pkg_license=("Apache-2.0")
 pkg_description="Test for the whale server"
-pkg_scaffolding="lancewf/scaffolding-chef-inspec"
+pkg_scaffolding="chef/scaffolding-chef-inspec"
