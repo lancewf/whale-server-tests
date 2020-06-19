@@ -28,9 +28,9 @@ control 'sjcmmsn-com' do
     subject do
       JSON.parse(inspec.http("http://www.sjcmmsn.com/services/getVolunteers", max_redirects: 2).body, symbolize_names: true)
     end
-    its('length') { should be > 100 }
+    its('length') { should be > 50 }
     it "Has correct volunteer" do
-      expect(subject.index { |v| v[:first_name] == "Lance" && v[:last_name] == "Finfrock" } >= 0).to be true
+      expect(subject.index { |v| v[:first_name] == "Carla" && v[:last_name] == "Chalker" } >= 0).to be true
     end
   end
   describe inspec.http("https://www.sjcmmsn.com/services/getReports") do
